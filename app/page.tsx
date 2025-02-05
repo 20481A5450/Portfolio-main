@@ -137,7 +137,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">B.Tech in Artificial Intelligence & Data Science</h3>
+              <h3 className="text-2xl md:text-2xl font-semibold mb-4">B.Tech in Artificial Intelligence & Data Science</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Gudlavalleru Engineering College - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2020 — 2024</p>
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">Higher Secondary Classes (HSC)/11th & 12th Class</h3>
+              <h3 className="text-2xl md:text-2xl font-semibold mb-4">Higher Secondary Classes (HSC)/11th & 12th Class</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Sri Sarada Educational Institutions - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2018 — 2020</p>
@@ -161,7 +161,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">High School (SSC)/10th Class</h3>
+              <h3 className="text-2xl md:text-2xl font-semibold mb-4">High School (SSC)/10th Class</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Ravindra Bharathi Public School - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2017 — 2018</p>
