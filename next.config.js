@@ -1,16 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: true,  
+  // Add Cloudflare Workers configuration
+  // experimental: {
+  //   runtime: 'edge',
+  // },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.experiments = {
         ...config.experiments,
         topLevelAwait: true,
-      };
+      }
     }
-    return config;
+    return config
   },
-  output: "export",
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
