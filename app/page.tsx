@@ -18,7 +18,7 @@ export default function Home() {
           Zohaib Shaik
         </h1>
         <p className="text-2xl md:text-3xl text-muted-foreground mb-4">
-          Gen AI Developer and Enthusiast
+          Full Stack AI Developer and Enthusiast
         </p>
         <div className="flex gap-6">
           <Button variant="ghost" size="icon" asChild>
@@ -273,10 +273,10 @@ export default function Home() {
         <div className="space-y-6">
           {[
             {
-              title: "",
-              conference: "",
+              title: "Passive-Aggresive Classifier Driven Drug Recommendation System",
+              conference: "7th International Conference on Intelligent Computing(IConIC)",
               year: 2024,
-              link: ""
+              link: "https://drive.google.com/file/d/1LXNt7kOSDAjqr8IAc9-MqE-OHarN0Ay5/view"
             }
           ].map((publication, index) => (
             <Card key={index}>
