@@ -3,11 +3,17 @@ import Link from 'next/link'
 import { Navigation } from './components/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import React from 'react';
+import React ,{useEffect} from 'react';
 
 export const runtime = "edge";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+        console.log(self)    
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
