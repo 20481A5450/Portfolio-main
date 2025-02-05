@@ -2,14 +2,12 @@
   "name": "zohaib-shaik-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://20481A5450.github.io/Portfolio-main",
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "export": "next export",
-  "start": "next start",
-  "lint": "next lint",
-  "deploy": "gh-pages -d out"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.4",
@@ -34,7 +32,6 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
-    "gh-pages": "^6.3.0",
     "postcss": "8.4.25",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
