@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,  
   // Add Cloudflare Workers configuration
   experimental: {
-    runtime: 'edge',
+    // runtime: 'edge',
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
