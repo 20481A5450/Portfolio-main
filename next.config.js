@@ -14,6 +14,9 @@ const nextConfig = {
     }
     return config
   },
+  output:"export", // Ensures static export
+  basePath: "/Portfolio-main", // Must match your GitHub repository name
+  assetPrefix: "/Portfolio-main",
 }
 
 module.exports = nextConfig
