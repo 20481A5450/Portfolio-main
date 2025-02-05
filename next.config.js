@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,  
   // Add Cloudflare Workers configuration
-  // experimental: {
-  //   runtime: 'edge',
-  // },
+  experimental: {
+    runtime: 'edge',
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.experiments = {
@@ -14,9 +14,6 @@ const nextConfig = {
     }
     return config
   },
-  output:"export", // Ensures static export
-  basePath: "/Portfolio-main", // Must match your GitHub repository name
-  assetPrefix: "/Portfolio-main",
 }
 
 module.exports = nextConfig

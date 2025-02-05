@@ -11,7 +11,14 @@ export const runtime = "edge";
 export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-        console.log(self)    
+      navigator.serviceWorker
+        .register('/service-worker.js') // Adjust the path based on your project's setup
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
     }
   }, []);
 
@@ -301,32 +308,35 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 md:px-6 lg:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4 flex items-center gap-2">
           <span className="text-muted-foreground">06.</span> Contact
         </h2>
         <div className="rounded-lg border border-border bg-card p-6">
-          <p className="text-lg text-muted-foreground mb-8">
-            I'm always open to new opportunities and collaborations. Feel free to reach out!
+          <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+            I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <Link 
-              href="mailto:shaikzohaibgec@gmail.com"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-            >
-            <Mail className="h-5 w-5" />
-              Email Me
-            </Link>
-            <Link 
-              href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-              target="_blank"
-            >
-            <Linkedin className="h-5 w-5" />
-              Connect on LinkedIn
-            </Link>
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* Email Button */}
+            <Button variant="default" size="lg" asChild>
+              <Link href="mailto:shaikzohaibgec@gmail.com">
+                Get in Touch via Email
+              </Link>
+            </Button>
+
+            {/* Social Media Links */}
+            <div className="flex gap-4 items-center">
+              <Link href="https://github.com/20481A5450" target="_blank">
+                <Github className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/" target="_blank">
+                <Linkedin className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
+              </Link>
+              <Link href="mailto:shaikzohaibgec@gmail.com">
+                <Mail className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
