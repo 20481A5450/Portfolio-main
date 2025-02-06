@@ -10,15 +10,10 @@ export const runtime = "edge";
 
 export default function Home() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/service-worker.js') // Adjust the path based on your project's setup
-        .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
+    if (typeof window !== 'undefined') {
+      // Safe to use browser-specific APIs
+      const self = window.self;
+      // Your client-side code here
     }
   }, []);
 
