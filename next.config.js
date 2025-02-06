@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: "export", // Enables static export for GitHub Pages
   reactStrictMode: true,
   images: {
-    unoptimized: true, // Required for GitHub Pages
+    unoptimized: true, // Fixes Next.js Image issue for static exports
   },
 };
 
