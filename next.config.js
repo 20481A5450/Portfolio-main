@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,  
+  output: "export",
+  basePath: "/Portfolio-main", 
   // Add Cloudflare Workers configuration
   experimental: {
     // runtime: 'edge',
