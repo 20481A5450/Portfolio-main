@@ -1,33 +1,24 @@
-"use client";
 import { Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 import { Navigation } from './components/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import React ,{useEffect} from 'react';
+import React from 'react';
 
-// Remove the runtime declaration
-// export const runtime = "edge";
+export const runtime = "edge";
 
 export default function Home() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Safe to use browser-specific APIs
-      const self = window.self;
-      // Your client-side code here
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
+      
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] px-4 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-2">
           Zohaib Shaik
         </h1>
         <p className="text-2xl md:text-3xl text-muted-foreground mb-4">
-          Full Stack AI Developer and Enthusiast
+          Gen AI Developer and Enthusiast
         </p>
         <div className="flex gap-6">
           <Button variant="ghost" size="icon" asChild>
@@ -146,7 +137,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-2xl font-semibold mb-4">B.Tech in Artificial Intelligence & Data Science</h3>
+              <h3 className="text-sm md:text-3xl font-semibold mb-4">B.Tech in Artificial Intelligence & Data Science</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Gudlavalleru Engineering College - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2020 — 2024</p>
@@ -158,7 +149,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-2xl font-semibold mb-4">Higher Secondary Classes (HSC)/11th & 12th Class</h3>
+              <h3 className="text-sm md:text-3xl font-semibold mb-4">Higher Secondary Classes (HSC)/11th & 12th Class</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Sri Sarada Educational Institutions - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2018 — 2020</p>
@@ -170,7 +161,7 @@ export default function Home() {
         <div className="space-y-8"> {/* Increased space between cards */}
           <Card>
             <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
-              <h3 className="text-2xl md:text-2xl font-semibold mb-4">High School (SSC)/10th Class</h3>
+              <h3 className="text-sm md:text-3xl font-semibold mb-4">High School (SSC)/10th Class</h3>
               <div className="space-y-3"> {/* Added spacing between details */}
                 <p className="text-lg text-muted-foreground">Ravindra Bharathi Public School - Vijayawada, AP</p>
                 <p className="text-base text-muted-foreground">2017 — 2018</p>
@@ -282,10 +273,10 @@ export default function Home() {
         <div className="space-y-6">
           {[
             {
-              title: "Passive-Aggresive Classifier Driven Drug Recommendation System",
-              conference: "7th International Conference on Intelligent Computing(IConIC)",
+              title: "",
+              conference: "",
               year: 2024,
-              link: "https://drive.google.com/file/d/1LXNt7kOSDAjqr8IAc9-MqE-OHarN0Ay5/view"
+              link: ""
             }
           ].map((publication, index) => (
             <Card key={index}>
@@ -303,35 +294,32 @@ export default function Home() {
           ))}
         </div>
       </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 md:px-6 lg:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4 flex items-center gap-2">
           <span className="text-muted-foreground">06.</span> Contact
         </h2>
         <div className="rounded-lg border border-border bg-card p-6">
-          <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-            I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out.
+          <p className="text-lg text-muted-foreground mb-8">
+            I'm always open to new opportunities and collaborations. Feel free to reach out!
           </p>
-          <div className="flex flex-col md:flex-row gap-6">
-            {/* Email Button
-            <Button variant="default" size="lg" asChild>
-              <Link href="mailto:shaikzohaibgec@gmail.com">
-                Get in Touch via Email
-              </Link>
-            </Button> */}
-
-            {/* Social Media Links */}
-            <div className="flex gap-4 items-center">
-              <Link href="https://github.com/20481A5450" target="_blank">
-                <Github className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
-              </Link>
-              <Link href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/" target="_blank">
-                <Linkedin className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
-              </Link>
-              <Link href="mailto:shaikzohaibgec@gmail.com">
-                <Mail className="h-8 w-8 text-primary hover:text-muted-foreground transition-colors" />
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <Link 
+              href="mailto:shaikzohaibgec@gmail.com"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+            >
+            <Mail className="h-5 w-5" />
+              Email Me
+            </Link>
+            <Link 
+              href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+              target="_blank"
+            >
+            <Linkedin className="h-5 w-5" />
+              Connect on LinkedIn
+            </Link>
           </div>
         </div>
       </section>

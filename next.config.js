@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "/Portfolio-main", 
+  reactStrictMode: true,
   // Add Cloudflare Workers configuration
   experimental: {
-    // runtime: 'edge',
+    runtime: 'edge',
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
@@ -15,6 +14,6 @@ const nextConfig = {
     }
     return config
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
