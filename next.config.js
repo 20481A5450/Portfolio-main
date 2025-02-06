@@ -1,9 +1,23 @@
 /** @type {import('next').NextConfig} */
+const isGithubPages = process.env.NODE_ENV === "production";
+const repoName = "Portfolio-main"; // Change this to your GitHub repo name
+
 const nextConfig = {
-  output: "export", // Enables static export for GitHub Pages
   reactStrictMode: true,
+  output: "export", // Ensures static export works
+  assetPrefix: isGithubPages ? `/${repoName}/` : "",
+  basePath: isGithubPages ? `/${repoName}` : "",
   images: {
-    unoptimized: true, // Fixes Next.js Image issue for static exports
+    unoptimized: true, // Required for Next.js static export
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.experiments = {
+        ...config.experiments,
+        topLevelAwait: true,
+      };
+    }
+    return config;
   },
 };
 
