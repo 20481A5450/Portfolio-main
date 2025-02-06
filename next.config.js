@@ -4,7 +4,6 @@ const repoName = "Portfolio-main"; // Change this to your GitHub repo name
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "export", // Ensures static export works
   assetPrefix: isGithubPages ? `/${repoName}/` : "",
   basePath: isGithubPages ? `/${repoName}` : "",
   images: {
@@ -22,6 +21,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-
-

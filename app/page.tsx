@@ -1,14 +1,21 @@
-'use client'
-import { Github, Linkedin, Mail } from 'lucide-react'
-import Link from 'next/link'
-import { Navigation } from './components/navigation'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import React from 'react';
+"use client";
+
+import { Github, Linkedin, Mail } from 'lucide-react';
+import Link from 'next/link';
+import { Navigation } from './components/navigation';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import React, { useEffect } from 'react';
+
+export default function Home() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      console.log('Service worker is supported');
+    }
+  }, []);
 
 // export const runtime = "edge";
 
-export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
@@ -274,10 +281,10 @@ export default function Home() {
         <div className="space-y-6">
           {[
             {
-              title: "",
-              conference: "",
+              title: "Passive-Aggressive Classifier Driven Drug Recommendation System",
+              conference: "7th International Conference on Intelligent Computing(IConIC) held on",
               year: 2024,
-              link: ""
+              link: "https://drive.google.com/file/d/1LXNt7kOSDAjqr8IAc9-MqE-OHarN0Ay5/view"
             }
           ].map((publication, index) => (
             <Card key={index}>
