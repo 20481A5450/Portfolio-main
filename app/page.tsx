@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import React ,{useEffect} from 'react';
 
-export const runtime = "edge";
+// Remove the runtime declaration
+// export const runtime = "edge";
 
 export default function Home() {
   useEffect(() => {
@@ -20,7 +21,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-[60vh] px-4 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-2">
@@ -313,12 +313,12 @@ export default function Home() {
             I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out.
           </p>
           <div className="flex flex-col md:flex-row gap-6">
-            {/* Email Button */}
+            {/* Email Button
             <Button variant="default" size="lg" asChild>
               <Link href="mailto:shaikzohaibgec@gmail.com">
                 Get in Touch via Email
               </Link>
-            </Button>
+            </Button> */}
 
             {/* Social Media Links */}
             <div className="flex gap-4 items-center">
