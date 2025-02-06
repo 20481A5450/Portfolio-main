@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import React from 'react';
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export default function Home() {
   return (
