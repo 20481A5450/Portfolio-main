@@ -1,19 +1,21 @@
 "use client";
-
 import { Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Navigation } from './components/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import component and disable SSR
+const MyComponent = dynamic(() => import('./page'), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      console.log('Service worker is supported');
+    if (typeof window !== "undefined") {
+      console.log("Client-side rendering detected!");
     }
   }, []);
-
 // export const runtime = "edge";
 
   return (
