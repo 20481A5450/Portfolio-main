@@ -1,11 +1,9 @@
-name = "Portfolio-main"
-
+name = "portfolio-main"  # Fixed the name issue (lowercase + dashes only)
 compatibility_date = "2025-02-10"
 compatibility_flags = ["nodejs_compat"]
 
-# Remove the main field as it's not needed for static sites
-# main = ""
+# Add this field (to replace entry-point)
+main = "workers-site"
 
 [site]
-bucket = "./public" # Adjust this path to where your static files are located
-entry-point = "workers-site" # This is typically the default entry point for static sites
+bucket = "./public" # Ensure this is the correct path to your static files
