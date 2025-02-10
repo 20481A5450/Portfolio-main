@@ -5,10 +5,6 @@ import { Navigation } from './components/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import React, { useEffect } from 'react';
-import dynamic from 'next/dynamic';
-
-// Dynamically import component and disable SSR
-const MyComponent = dynamic(() => import('./page'), { ssr: false });
 
 export default function Home() {
   useEffect(() => {

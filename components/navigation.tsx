@@ -28,7 +28,7 @@ return (
     <div className="fixed top-0 left-0 right-0 z-50 border-b bg-background/80 backdrop-blur-sm">
     <div className="flex items-center justify-between px-4 h-16 max-w-7xl mx-auto">
         <Link href="/" className="font-semibold">
-        Ajay Kommineni
+        Zohaib Shaik
         </Link>
 
         {/* Desktop Navigation */}
