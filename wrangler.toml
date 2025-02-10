@@ -1,6 +1,3 @@
 name = "portfolio-main"  # Fixed the name issue (lowercase + dashes only)
 compatibility_date = "2025-02-10"
 compatibility_flags = ["nodejs_compat"]
-
-# Add this field (to replace entry-point)
-main = ""
