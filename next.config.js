@@ -1,19 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Add Cloudflare Workers configuration
+  output: "export", // Ensures static site export
+  trailingSlash: true, // Ensures correct routing for static files
+  images: {
+    unoptimized: true, // Needed for static export
+  },
   experimental: {
-    runtime: 'edge',
+    runtime: "edge",
   },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.experiments = {
-        ...config.experiments,
-        topLevelAwait: true,
-      }
-    }
-    return config
-  },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
