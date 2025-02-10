@@ -1,24 +1,19 @@
 /** @type {import('next').NextConfig} */
-const isGithubPages = process.env.NODE_ENV === "production";
-const repoName = "Portfolio-main"; // Change this to your GitHub repo name
-
 const nextConfig = {
-  output: "export",
   reactStrictMode: true,
-  assetPrefix: isGithubPages ? `/${repoName}/` : "",
-  basePath: isGithubPages ? `/${repoName}` : "",
-  images: {
-    unoptimized: true, // Required for Next.js static export
+  // Add Cloudflare Workers configuration
+  experimental: {
+    runtime: 'edge',
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.experiments = {
         ...config.experiments,
         topLevelAwait: true,
-      };
+      }
     }
-    return config;
+    return config
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
