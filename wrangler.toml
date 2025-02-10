@@ -1,2 +1,11 @@
-compatibility_flags = [ "nodejs_compat" ]
+name = "Portfolio-main"
 
+compatibility_date = "2025-02-10"
+compatibility_flags = ["nodejs_compat"]
+
+# Remove the main field as it's not needed for static sites
+# main = ""
+
+[site]
+bucket = "./public" # Adjust this path to where your static files are located
+entry-point = "workers-site" # This is typically the default entry point for static sites
