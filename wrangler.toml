@@ -3,7 +3,4 @@ compatibility_date = "2025-02-10"
 compatibility_flags = ["nodejs_compat"]
 
 # Add this field (to replace entry-point)
-main = "workers-site"
-
-[site]
-bucket = "./public" # Ensure this is the correct path to your static files
+main = ""
