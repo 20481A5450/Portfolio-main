@@ -1,4 +1,3 @@
-"use client";
 import { Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Navigation } from './components/navigation';
@@ -6,14 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import React, { useEffect } from 'react';
 
-export default function Home() {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      console.log("Client-side rendering detected!");
-    }
-  }, []);
-// export const runtime = "edge";
+export const runtime = "edge";
 
+export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
