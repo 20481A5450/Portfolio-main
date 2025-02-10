@@ -3,6 +3,7 @@ const isGithubPages = process.env.NODE_ENV === "production";
 const repoName = "Portfolio-main"; // Change this to your GitHub repo name
 
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
   assetPrefix: isGithubPages ? `/${repoName}/` : "",
   basePath: isGithubPages ? `/${repoName}` : "",
