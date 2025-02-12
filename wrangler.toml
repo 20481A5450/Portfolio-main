@@ -4,4 +4,8 @@ compatibility_flags = ["nodejs_compat"]
 
 # Remove the `entry-point`, since it's causing issues
 [site]
+<<<<<<< HEAD
 bucket = ".vercel/output/static" # Change this if your build output is in `out/`
+=======
+bucket = ".vercel/output/static" # Change this if your build output is in `out/`
+>>>>>>> 520ce5963a53e19b48509bfdeaca953060cf61c3
