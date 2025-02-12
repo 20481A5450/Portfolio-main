@@ -185,61 +185,49 @@ export default function Home() {
           <span className="text-muted-foreground">04.</span> Projects
         </h2>
         <div className="grid gap-8 md:grid-cols-2"> {/* Increased gap from 6 to 8 */}
-          {[
+        {[
             {
-              title: "PagePod - Multi-Agent Web content Podcast generator",
-              description: "This project uses a multi-agent framework to automatically generate podcasts from website content. It leverages the power of AI to scrape web content, refine it, create a script, and convert it to speech.",
-              technologies: ["Python", "LangChain", "Autogen", "GPT-4"],
-              github: "https://github.com/AjayK47/PagePod"
+              title: "Drug Recommendation System -- NLP",
+              description: "The Project NLP-driven drug recommendation system analyzes patient reviews using TF-IDF and a Passive Aggressive Classifier to suggest optimal medications across 120 medical conditions.",
+              technologies: ["Python", "NLTK", "Machine Learning - NLP", "Flask", "HTML", "CSS"],
+              github: "https://github.com/20481A5450/Passive-Aggressive-Classifier-based-Drug-Review-System-main"
             },
             {
-              title: "Stock Insight Agentic Framework with Autogen",
-              description: "This is a multi-agent system that uses LLM's to analyze financial data, review market news, and predict company stock performance. Built with the autogen library, it coordinates multiple agents, each assigned a specific role in processing financial information and making predictions",
-              technologies: ["Python", "Autogen", "LLMs", "Financial APIs"],
-              github: "https://github.com/AjayK47/Stock-Insight-Agent"
+              title: "Fishery Advisory Services",
+              description: "A deep learning-based advisory system that provides valuable insights on fish species, locations, and weather conditions to maximize profits and conserve resources for fishermen.",
+              technologies: ["Python", "TensorFlow", "Flask", "API", "HTML", "CSS3"],
+              github: ""
             },
             {
-              title: "AI Voice Over and Script Generator for Youtube",
-              description: "This project is a Streamlit application that uses various LLM models to generate YouTube scripts and voiceovers. It aims to assist content creators in producing high-quality YouTube videos with minimal effort.",
-              technologies: ["Python", "Streamlit", "LLMs", "TTS"],
-              github: "https://github.com/AjayK47/AI-Youtube-Voice-Over-and-Script-Generator"
+              title: "Django Notes App",
+              description: "A web-based note-taking application built using Django, allowing users to efficiently manage, organize, and retrieve notes with a seamless backend integration.",
+              technologies: ["Python", "Django", "HTML", "CSS", "Bootstrap"],
+              github: "https://github.com/20481A5450/Django-React-NotesApp"
             },
             {
-              title: "Gemma Model Finetuning Using Lora",
-              description: "Finetuned Google's Open source Gemma 2b model on Indian history domain using Lora technique , huggingface transformers library",
-              technologies: ["Python", "PyTorch", "Transformers", "LoRA"],
-              github: "https://github.com/AjayK47/Gemma-Model-Finetuning-Using-Lora"
+              title: "College Fest Web-page",
+              description: "A user-friendly web page developed for a UI/UX design competition, ensuring smooth navigation and efficient performance within the given timeline.",
+              technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+              github: "https://20481a5450.github.io/CollegeFestPage/"
             },
             {
-              title: "Web Page ChatBot using Llama index",
-              description: "Web Page Q&A Chatbot is a Streamlit web application designed to interactively answer questions based on web page data. The chatbot uses LLMS such as Hugging Face, Gemini or OpenAI to provide accurate and context-aware responses.",
-              technologies: ["Python", "Streamlit", "LlamaIndex", "LLMs"],
-              github: "https://github.com/AjayK47/Web-ChatBot-using-Llama-index"
-            },
-            {
-              title: "Gemini-File with Llama-Index",
-              description: "Gemini-File is a Streamlit web application that allows users to upload PDF files, index their contents using the Gemini search engine from the Llama-Index library, and query the documents.",
-              technologies: ["Python", "Streamlit", "LlamaIndex", "Gemini"],
-              github: "https://github.com/AjayK47/Gemini-File"
-            },
-            {
-              title: "Face Emotion Detection using CNN",
-              description: "A project involving training a Convolutional Neural Network (CNN) for facial expression recognition.",
-              technologies: ["Python", "CNN", "Deep Learning", "Computer Vision"],
+              title: "InstaMint",
+              description: "Advanced EMI Calculator is a modern, feature-rich EMI computation tool designed for Indian consumers in 2025. It helps users calculate EMIs for different loan types, compare multiple loan options, visualize, and estimate affordability based on income and expenses.",
+              technologies: ["Python", "Streamlit", "Plotly", "Steamlit Cloud Community", "Pandas & Numpy"],
               github: "https://github.com/AjayK47/Face-Emotion-Detection_CNN"
             },
             {
-              title: "Boston Housing Price Prediction",
-              description: "A machine learning project for predicting median housing costs in different areas of Boston.",
-              technologies: ["Python", "ML", "Regression", "Data Analysis"],
-              github: "https://github.com/AjayK47/Boston-Hosuing-Prediction-and-Deployment-"
+              title: "Webcrawler",
+              description: "This WebCrawler designed by scrapy where the web crawler, crawls through this website https://www.takeofftalent.com/ and some other and display's the results in here.",
+              technologies: ["Python", "Scrapy","Markdown"],
+              github: "https://github.com/20481A5450/WebCrawler"
             },
             {
-              title: "Fruits/Veggies Classification with InceptionV3",
-              description: "A project that uses a fine tuned InceptionV3 model to identify vegetables or fruits in uploaded images also provide nutrition info using Google PaLM API",
-              technologies: ["Python", "InceptionV3", "Google PaLM", "Computer Vision"],
-              github: "https://github.com/AjayK47/image-classification-with-inceptioV3-and-Google-Palm"
-            }
+              title: "Expense Tracker",
+              description: "An Expense tracker using Streamlit with a NoSQL DB(Firebase) connected to it and deployed in the Streamlit Community Cloud",
+              technologies: ["Python", "Streamlit", "Firebase", "Streamlit Cloud Community"],
+              github: "https://expense-tracker-zo.streamlit.app/"
+            },
           ].map((project, index) => (
             <Card key={index} className="overflow-hidden"> {/* Added overflow-hidden */}
               <CardContent className="pt-8 p-6 md:p-8"> {/* Increased padding */}
