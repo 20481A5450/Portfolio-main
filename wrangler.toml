@@ -1,0 +1,7 @@
+name = "portfolio-main"
+compatibility_date = "2025-02-10"
+compatibility_flags = ["nodejs_compat"]
+
+# Remove the `entry-point`, since it's causing issues
+[site]
+bucket = ".vercel/output/static" # Change this if your build output is in `out/`
