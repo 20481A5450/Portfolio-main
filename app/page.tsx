@@ -290,27 +290,28 @@ export default function Home() {
         </h2>
         <div className="rounded-lg border border-border bg-card p-6">
           <p className="text-lg text-muted-foreground mb-8">
-            I'm always open to new opportunities and collaborations. Feel free to reach out!
+          I'm always open to new opportunities and collaborations. Feel free to reach out!
           </p>
           <div className="flex flex-col sm:flex-row gap-6">
-            <Link 
-              href="mailto:shaikzohaibgec@gmail.com"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-            >
-            <Mail className="h-5 w-5" />
-              Email Me
-            </Link>
-            <Link 
-              href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-              target="_blank"
-            >
-            <Linkedin className="h-5 w-5" />
-              Connect on LinkedIn
-            </Link>
+        <Link 
+          href="mailto:shaikzohaibgec@gmail.com"
+          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+        >
+        <Mail className="h-5 w-5" />
+          Email Me
+        </Link>
+        <Link 
+          href="https://www.linkedin.com/in/zohaib-shaik-1a8877216/"
+          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          target="_blank"
+        >
+        <Linkedin className="h-5 w-5" />
+          Connect on LinkedIn
+        </Link>
           </div>
         </div>
       </section>
+      <img src="/api/tracker" alt="Tracking Pixel" style={{ display: "none" }} />
     </div>
   )
 }
